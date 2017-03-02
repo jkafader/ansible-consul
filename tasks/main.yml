@@ -54,6 +54,7 @@
     comment: "Consul user"
     uid: 1042
     group: bin
+    home: /var/run/consul
 
 - name: OS-specific variables
   include_vars: "{{ ansible_os_family }}.yml"
