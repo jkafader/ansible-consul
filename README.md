@@ -51,6 +51,8 @@ inventory file (see below):
 | `consul_http_bind_address` | *0.0.0.0* | HTTP API bind address |
 | `consul_https_bind_address` | *0.0.0.0* | HTTPS API bind address |
 | `consul_rpc_bind_address` | *0.0.0.0* | RPC bind address |
+| `consul_serf_wan_bind_address` | *0.0.0.0* | Serf WAN bind address |
+| `consul_serf_lan_bind_address` | *0.0.0.0* | Serf LAN bind address |
 | `consul_node_name` | `{{ inventory_hostname_short }}` | Node name (should not include dots) |
 | `consul_recursors` | Empty list | List of upstream DNS servers — see [recursors](https://www.consul.io/docs/agent/options.html#recursors) | 
 | `consul_bind_address` | dynamic from hosts inventory | The interface address to bind to

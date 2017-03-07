@@ -22,6 +22,8 @@ consul_dns_bind_address: "127.0.0.1"
 consul_http_bind_address: "0.0.0.0"
 consul_https_bind_address: "0.0.0.0"
 consul_rpc_bind_address: "0.0.0.0"
+consul_serf_wan_bind_address: "0.0.0.0"
+consul_serf_lan_bind_address: "0.0.0.0"
 consul_node_name: "{{ inventory_hostname_short }}"
 consul_recursors: "{{ lookup('env','CONSUL_RECURSORS') | default('[]', true) }}"
 
