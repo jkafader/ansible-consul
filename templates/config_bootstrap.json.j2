@@ -11,13 +11,13 @@
   "serf_wan_bind": "{{ consul_serf_wan_bind_address }}",
   "serf_lan_bind": "{{ consul_serf_lan_bind_address }}",
   "ports": {
-    "dns": "{{consul_dns_port}}",
-    "http": "{{consul_http_port}}",
-    "https": "{{consul_https_port}}",
-    "rpc": "{{consul_rpc_port}}",
-    "serf_wan": "{{consul_serf_wan_port}}",
-    "serf_lan": "{{consul_serf_lan_port}}",
-    "server": "{{consul_server_port}}"
+    "dns": {{consul_dns_port}},
+    "http": {{consul_http_port}},
+    "https": {{consul_https_port}},
+    "rpc": {{consul_rpc_port}},
+    "serf_wan": {{consul_serf_wan_port}},
+    "serf_lan": {{consul_serf_lan_port}},
+    "server": {{consul_server_port}}
   },
   {%- if consul_recursors|length > 0 -%}
   "recursors": [ {% for recursor in consul_recursors -%}
