@@ -24,6 +24,13 @@ consul_https_bind_address: "0.0.0.0"
 consul_rpc_bind_address: "0.0.0.0"
 consul_serf_wan_bind_address: "0.0.0.0"
 consul_serf_lan_bind_address: "0.0.0.0"
+consul_dns_port: 8600
+consul_http_port: 8500
+consul_https_port: -1
+consul_rpc_port: 8400
+consul_serf_wan_port: 8302
+consul_serf_lan_port: 8301
+consul_server_port: 8300
 consul_node_name: "{{ inventory_hostname_short }}"
 consul_recursors: "{{ lookup('env','CONSUL_RECURSORS') | default('[]', true) }}"
 
