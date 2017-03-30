@@ -3,14 +3,14 @@
 
 {
   "bind_addr": "{{ consul_bind_address }}",
-  "addresses": {
+  "advertise_addrs": {
     "dns": "{{ consul_dns_bind_address }}",
     "http": "{{ consul_http_bind_address }}",
     "https": "{{ consul_https_bind_address }}",
-    "rpc": "{{ consul_rpc_bind_address }}"
+    "rpc": "{{ consul_rpc_bind_address }}",
+    "serf_wan": "{{ consul_serf_wan_bind_address }}",
+    "serf_lan": "{{ consul_serf_lan_bind_address }}"
   },
-  "serf_wan_bind": "{{ consul_serf_wan_bind_address }}",
-  "serf_lan_bind": "{{ consul_serf_lan_bind_address }}",
   {%- if consul_recursors|length > 0 -%}
   "recursors": [ {% for recursor in consul_recursors -%}
                      {{ comma() }}"{{ recursor }}"
