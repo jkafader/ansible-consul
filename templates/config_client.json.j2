@@ -16,8 +16,8 @@
     "http": "{{consul_http_port}}",
     "https": "{{consul_https_port}}",
     "rpc": "{{consul_rpc_port}}",
-    "serf_wan": "{{consul_serf_wan}}",
-    "serf_lan": "{{consul_serf_lan}}",
+    "serf_wan": "{{consul_serf_wan_port}}",
+    "serf_lan": "{{consul_serf_lan_port}}",
     "server": "{{consul_server_port}}"
   }
   {%- if consul_recursors|length > 0 -%}
