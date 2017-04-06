@@ -64,3 +64,6 @@ consul_iptables_enable: true
 
 ### Consul
 consul_pkg: "consul_{{ consul_version }}_linux_amd64.zip"
+
+### Print Debug Messages
+consul_debug: false
