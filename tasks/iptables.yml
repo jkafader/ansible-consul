@@ -13,7 +13,7 @@
     match: udp
     destination_port: 53
     jump: REDIRECT
-    to_ports: 8600
+    to_ports: "{{consul_dns_port}}"
 
 - name: Redirect local DNS (2/4)
   iptables:
@@ -23,7 +23,7 @@
     match: tcp
     destination_port: 53
     jump: REDIRECT
-    to_ports: 8600
+    to_ports: "{{consul_dns_port}}"
 
 - name: Redirect local DNS (3/4)
   iptables:
@@ -33,7 +33,7 @@
     match: udp
     destination_port: 53
     jump: REDIRECT
-    to_ports: 8600
+    to_ports: "{{consul_dns_port}}"
     destination: localhost
 
 - name: Redirect local DNS (4/4)
@@ -44,6 +44,6 @@
     match: tcp
     destination_port: 53
     jump: REDIRECT
-    to_ports: 8600
+    to_ports: "{{consul_dns_port}}"
     destination: localhost
   
