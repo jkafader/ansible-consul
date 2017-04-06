@@ -58,7 +58,7 @@ consul_verify_server_hostname: false
 
 ## Other Options
 consul_dnsmasq_enable: "{{ lookup('env','CONSUL_DNSMASQ_ENABLE') | default(false, true) }}"
-consul_iptables_enable: "{{ lookup('env','CONSUL_IPTABLES_ENABLE') | default(false, true) }}"
+consul_iptables_enable: true
 
 ## Distribution
 

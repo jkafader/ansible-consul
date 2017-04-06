@@ -57,7 +57,7 @@ inventory file (see below):
 | `consul_recursors` | Empty list | List of upstream DNS servers — see [recursors](https://www.consul.io/docs/agent/options.html#recursors) | 
 | `consul_bind_address` | dynamic from hosts inventory | The interface address to bind to
 | `consul_dnsmasq_enable` | *false* | Whether to install and configure DNS API forwarding on port 53 using dnsmasq |
-| `consul_iptables_enable` | *false* | Whether to enable iptables rules for DNS forwarding to Consul |
+| `consul_iptables_enable` | *true* | Whether to enable iptables rules for DNS forwarding to Consul |
 | `consul_acl_enable` | *false* | Enable ACLs |
 | `consul_acl_datacenter` | *dc1* | ACL authoritative datacenter name |
 | `consul_acl_default_policy` | *allow* | Default ACL policy |
